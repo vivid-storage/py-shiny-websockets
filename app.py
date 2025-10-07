@@ -65,7 +65,7 @@ def server(input, output, session):
             const statusDiv = document.getElementById("websocket-status");
             if (statusDiv) {
                 if (whitelist === '["websocket"]') {
-                    statusDiv.innerHTML = '<div class="alert alert-success">Websocket whitelist is SET</div>';
+                    statusDiv.innerHTML = '<div class="alert alert-success">Websocket whitelist is enabled and app works correctly</div>';
                 } else {
                     statusDiv.innerHTML = '<div class="alert alert-info">Websocket whitelist is NOT set (default behavior)</div>';
                 }
@@ -143,7 +143,7 @@ def server(input, output, session):
                         const whitelist = window.localStorage["shiny.whitelist"];
                         let whitelistInfo = '';
                         if (whitelist === '["websocket"]') {
-                            whitelistInfo = '<br><small>Forced to use websocket only</small>';
+                            whitelistInfo = '<br><small>Connection forced to websocket-only mode</small>';
                         } else {
                             whitelistInfo = '<br><small>Using automatic transport selection</small>';
                         }
